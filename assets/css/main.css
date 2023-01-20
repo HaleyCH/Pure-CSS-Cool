@@ -1,13 +1,23 @@
 @import './base.css';
-@import './myStyle.css';
 @import './style.css';
 
-#app {
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
 
   font-weight: normal;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+#root{
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 1024px) {
@@ -16,9 +26,12 @@
     place-items: center;
   }
 
-  #app {
+  #root {
+    width: 1024px;
     display: flex;
     place-items: center;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
 }
