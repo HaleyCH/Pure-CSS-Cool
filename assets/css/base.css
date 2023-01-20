@@ -1,0 +1,126 @@
+/* color palette by HaleyCH*/
+:root {
+  --hch-c-black: hsl(196, 100%, 4%);
+  --hch-c-black-soft: hsl(197, 93%, 5%);
+  --hch-c-black-mute: hsl(198, 87%, 3%);
+
+  --hch-c-white: hsl(27, 16%, 89%);
+  --hch-c-white-soft: hsl(33, 33%, 89%);
+  --hch-c-white-mute: hsl(33, 23%, 92%);
+
+  --hch-c-mask-dark:rgba(0,0,0,0.3);
+  --hch-c-mask-light:hsla(27, 16%, 89%,0.3);
+
+  --hch-c-divider-light-1: hsla(119, 27%, 67%, 0.7);
+  --hch-c-divider-light-2: hsla(119, 27%, 67%, 0.9);
+  
+  --hch-c-divider-dark-1: hsla(176, 100%, 50%, 0.6);
+  --hch-c-divider-dark-2: hsla(176, 100%, 50%, 0.82);
+
+  --hch-c-text-light-1:hsl(196, 100%, 4%);
+  --hch-c-text-light-2:hsl(0, 0%, 60%);
+
+  --hch-c-text-dark-1:hsl(195, 80%, 98%);
+  --hch-c-text-dark-2:hsl(0, 0%, 58%);
+
+  --hch-c-shadow-light-1: hsla(0, 0%, 0%, 0.1);
+  --hch-c-shadow-light-2: hsla(0, 0%, 0%, 0.4);
+
+  --hch-c-shadow-dark-1: hsla(176, 100%, 50%, 0.338);
+  --hch-c-shadow-dark-2: hsla(176, 100%, 50%, 0.6);
+
+  --hch-c-text-highlight-light: hsl(116, 18%, 32%);
+  --hch-c-text-highlight-dark: hsl(176, 100%, 50%);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--hch-c-black);
+  --color-background-soft: var(--hch-c-black-soft);
+  --color-background-mute: var(--hch-c-black-mute);
+
+  --color-mask: var(--hch-c-mask-dark);
+
+  --color-border: var(--hch-c-divider-dark-1);
+  --color-border-hover: var(--hch-c-divider-dark-2);
+
+  --color-shadow: var(--hch-c-shadow-dark-1);
+  --color-shadow-hover: var(--hch-c-shadow-dark-2);
+
+  --color-heading: var(--hch-c-text-dark-1);
+  --color-text: var(--hch-c-text-dark-1);
+  --color-text-2: var(--hch-c-text-dark-2);
+
+  --color-text-highlight:var(--hch-c-text-highlight-dark);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: light){
+  :root {
+    --color-background: var(--hch-c-white);
+    --color-background-soft: var(--hch-c-white-soft);
+    --color-background-mute: var(--hch-c-white-mute);
+
+    --color-mask: var(--hch-c-mask-light);
+  
+    --color-border: var(--hch-c-divider-light-1);
+    --color-border-hover: var(--hch-c-divider-light-2);
+  
+    --color-shadow: var(--hch-c-shadow-light-1);
+    --color-shadow-hover: var(--hch-c-shadow-light-2);
+  
+    --color-heading: var(--hch-c-text-light-1);
+    --color-text: var(--hch-c-text-light-1);
+    --color-text-2:var(--hch-c-text-light-2);
+  
+    --color-text-highlight:var(--hch-c-text-highlight-light);
+  
+    --section-gap: 160px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--hch-c-black);
+    --color-background-soft: var(--hch-c-black-soft);
+    --color-background-mute: var(--hch-c-black-mute);
+
+    --color-mask:var(--hch-c-mask-dark);
+
+    --color-border: var(--hch-c-divider-dark-1);
+    --color-border-hover: var(--hch-c-divider-dark-2);
+
+    --color-shadow: var(--hch-c-shadow-dark-1);
+    --color-shadow-hover: var(--hch-c-shadow-dark-2);
+
+    --color-heading: var(--hch-c-text-dark-1);
+    --color-text: var(--hch-c-text-dark-1);
+    --color-text-2: var(--hch-c-text-dark-2);
+
+    --color-text-highlight:var(--hch-c-text-highlight-dark);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

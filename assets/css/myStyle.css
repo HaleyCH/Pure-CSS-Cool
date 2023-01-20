@@ -1,0 +1,161 @@
+.shadow-s {
+    box-shadow: 0 0 5px 0px var(--color-shadow);
+}
+
+.shadow-s-hover:hover {
+    box-shadow: 0 0 9px 0px var(--color-shadow-hover);
+}
+
+.shadow {
+    box-shadow: 0 0 11px 0px var(--color-shadow);
+}
+
+.shadow-hover:hover {
+    box-shadow: 0 0 17px 0px var(--color-shadow-hover);
+}
+
+.shadow-l {
+    box-shadow: 0 0 19px 0px var(--color-shadow);
+}
+
+.shadow-l-hover:hover {
+    box-shadow: 0 0 26px 0px var(--color-shadow-hover);
+}
+
+
+.border {
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-border);
+}
+
+.border-s {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border);
+}
+
+.border-l {
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--color-border);
+}
+
+.border-hover:hover {
+    border-color: var(--color-border-hover);
+}
+
+:root {
+    --hch-s-b-radius-s: 5px;
+    --hch-s-b-radius: 10px;
+    --hch-s-b-radius-l: 15px;
+    --hch-s-b-radius-max: 20px;
+
+    --hch-s-b-radius-s-hover: var(--hch-s-b-radius);
+    --hch-s-b-radius-hover: var(--hch-s-b-radius-l);
+    --hch-s-b-radius-l-hover: var(--hch-s-b-radius-max);
+}
+
+.b-radius-s {
+    border-radius: var(--hch-s-b-radius-s);
+}
+
+.b-radius-hover-s:hover {
+    border-radius: var(--hch-s-b-radius-s-hover);
+}
+
+.b-radius {
+    border-radius: var(--hch-s-b-radius);
+}
+
+.b-radius-hover:hover {
+    border-radius: var(--hch-s-b-radius-hover);
+}
+
+.b-radius-l {
+    border-radius: var(--hch-s-b-radius-l);
+}
+
+.b-radius-hover-l:hover {
+    border-radius: var(--hch-s-b-radius-l-hover);
+}
+
+
+.slow-speed {
+    transition: all 1.2s;
+}
+
+.norm-speed {
+    transition: all 0.5s;
+}
+
+.fast-speed {
+    transition: none;
+}
+
+
+:root {
+    --hch-s-margin-s: 10px;
+    --hch-s-margin: 15px;
+    --hch-s-margin-l: 20px;
+
+    --hch-s-padding-s: 10px;
+    --hch-s-padding: 15px;
+    --hch-s-padding-l: 20px;
+}
+
+.margin-s {
+    margin: var(--hch-s-margin-s);
+}
+
+.margin {
+    margin: var(--hch-s-margin);
+}
+
+.margin-l {
+    margin: var(--hch-s-margin-l);
+}
+
+
+.padding-s {
+    padding: var(--hch-s-margin-s);
+}
+
+.padding {
+    padding: var(--hch-s-margin);
+}
+
+.padding-l {
+    padding: var(--hch-s-margin-l);
+}
+
+button{
+    text-align: center;
+
+    min-width: 60px;
+    min-height: 40px;
+    padding: 10px;
+    color: var(--color-text);
+    background-color: var(--color-background-mute);
+}
+
+button:hover{
+    background-color: var(--color-background-soft);
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: var(--color-background-mute);
+    -webkit-box-shadow: inset 0 0 5px var(--color-background-mute);
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: var(--color-shadow-hover);
+    -webkit-box-shadow: inset 0 0 10px var(--color-shadow-hover);
+}
