@@ -1,0 +1,38 @@
+.loading-block{
+    width: 7px;
+    height: 20px;
+    background-color: aliceblue;
+    margin: 5px 10px;
+    border-radius: 3px;
+
+    animation: 2s load-animation infinite;
+    animation-delay: calc(0.3s * var(--i));
+}
+
+.block-container{
+    /* width: 230px; */
+    display: flex;
+
+    align-items: center;
+}
+
+@keyframes load-animation {
+    0%,100% {
+        heigit: 10px;
+        width: 7px;
+    }
+
+    30% {
+        height: 50px;
+        width: 6px;
+    }
+}
+
+.wrap{
+    /* width: 100%; */
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

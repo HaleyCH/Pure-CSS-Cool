@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="../assets/fontawesome-free-6.2.1-web/js/all.js"></script>
+    <title>Yofukashi no Uta</title>
+</head>
+
+<body style="overflow: hidden;margin:0;">
+    <video id="background_video" autoplay muted>
+        <source src="TVアニメ『よふかしのうた』本PV.mp4">
+    </video>
+</body>
+
+<script>
+    function resize_bg() {
+        console.log("start");        
+        var v = document.getElementById("background_video")
+        var mh = window.innerHeight
+        var mw = window.innerWidth
+        v.style.height = ''
+        v.style.width = ''
+        var vh = parseInt(window.getComputedStyle(v).height.replace('px', ''))
+        var vw = parseInt(window.getComputedStyle(v).width.replace('px', ''))
+        
+        if ((mh/mw-vh/vw)>0){
+            v.style.height = mh.toString()+'px'
+            v.style.widows = ''
+        }else{
+            v.style.widows = mw.toString()+'px'
+            v.style.height = ''
+        }
+        // change background_video::before size
+        var b = document.getElementById("background_video::before")
+        b.style.height = v.style.height
+        b.style.width = v.style.width
+    }
+    window.onload = resize_bg
+    window.addEventListener('resize',resize_bg)
+</script>
+
+</html>
